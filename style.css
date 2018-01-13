@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color:cornflowerblue;
+}
+
+
+#heading_text{
+    color: #FFF;
+    margin: 10px 50px;
+    padding-top: 30px;
+    height: 60px;
+}
+
+.menu{
+    float: right;
+    list-style: none;
+    margin: 20px;
+}
+
+.menu li{
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #FFF;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    border: 1px solid #FFF;
+}
+.menu li a:hover{
+    background: #FFF;
+    transition: 1s;
+    color: black;
+}
+
+#projects {
+    height: 430px;
+    border: 1px solid red;
+    background-image: url("img/project_layout_bg.png");
+    margin-top: 200px;
+}
+
+#projects div{
+
+    display: inline-block;
+    background-image: url("img/projects_bg.png");
+    margin: 30px;
+    color: white;
+}
+
+
+#first_project{
+    width: 320px;
+    height: 270px;
+    border: 1px solid red;
+    margin-left: 20px;
+    padding: 50px;
+}
+#second_project{
+    height: 270px;
+    border: 1px solid red;
+    width: 320px;
+    padding: 50px;
+}
+#third_project{
+    width: 320px;
+    height: 270px;
+    border: 1px solid red;
+    padding: 50px;
+
+}
+#fourth_project{
+    width: 320px;
+    height: 270px;
+    border: 1px solid red;
+    padding: 50px;
+}
