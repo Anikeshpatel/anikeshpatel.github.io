@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background: linear-gradient(269deg, #05c9f9, #d12aff);
+    background-size: 400% 400%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+    animation: AnimationName 4s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 300;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #05c9f9;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 500; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #05c9f9;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #05c9f9;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #05c9f9;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #05c9f9; }
+
+.setting {
+    position: absolute;
+    width: 15%;
+    top: 80px;
+    fill: #05c9f9;
+}
+
+.setting svg {
+    width: 15%;
+    top: 5px;
+    position: relative;
+}
+
+.model-wall {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: rgba(0,0,0,.5);
+    display: none;
+    transition: all 2s ease-in-out;
+    opacity: 0;
+}
+.model {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.show-model {
+    display: block;
+    opacity: 1;
+}
+.model-winnig-view {
+    display: flex;
+    align-content: space-between;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 100%;
+}
+.model-winnig-view label {
+    margin-right: 20%;
+    font-size: 20px;
+    font-weight: 300;
+}
+.model-winnig-view select {
+    font-size: 20px;
+    width: 100px;
+    background-color: #05c9f9;
+    color: #fff;
+    stroke: none;
+    border: none;
+}
+
+#setting-done-btn {
+    background-color: #05c9f9;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+#setting-done-btn:hover {
+    transform: translateX(-50%) skewX(10deg);
+}
