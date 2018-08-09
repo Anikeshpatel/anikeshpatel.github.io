@@ -40,7 +40,7 @@ rawInput.addEventListener('input', function(event){
 // Listening for input in second block
 binInput.addEventListener('input', function (event) {
     binData = event.target.outerText;
-    binWords = binData.split("~");
+    binWords = binData.split(" ");
     showStringOutPut();
 });
 
@@ -89,7 +89,7 @@ function showBinOutPut() {
             }
         }
 
-        bin += "~";
+        bin += " ";
     }
     binInput.textContent = bin;
 }
