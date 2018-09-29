@@ -1,81 +1,144 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color:cornflowerblue;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato';
+    font-size: 62.5%;
+    background: #262626;
+    user-select: none;
 }
 
-
-#heading_text{
-    color: #FFF;
-    margin: 10px 50px;
+.card {
+    text-align: center;
+    /* background: #262626; */
+    /* background: linear-gradient(blue, purple); */
+    background: transparent;
+    width: 500px;
+    margin: 5% auto;
+    top: 40%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
     padding-top: 30px;
-    height: 60px;
+    padding-bottom: 30px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-.menu{
-    float: right;
-    list-style: none;
-    margin: 20px;
+.card .pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    z-index: 999;
 }
-
-.menu li{
-    display: inline-block;
-    margin: 10px 5px;
+.card .bio {
+    margin-top: 10px;
+    z-index: 99;
 }
-
-.menu li a{
-    text-decoration: none;
-    color: #FFF;
-    padding: 5px 10px;
-    font-family: sans-serif;
+.card .bio .name {
+    font-weight: 900;
     letter-spacing: 2px;
-    border: 1px solid #FFF;
+    font-size: 1.5rem;
 }
-.menu li a:hover{
-    background: #FFF;
-    transition: 1s;
-    color: black;
+.card .bio .profession {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1rem;
 }
-
-#projects {
-    height: 430px;
-    border: 1px solid red;
-    background-image: url("img/project_layout_bg.png");
-    margin-top: 200px;
+.card .gred {
+    background: linear-gradient(blue, purple);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .3s;
+    top: calc(100% - 5px);
+    left: 0;
+    z-index: -1;
 }
-
-#projects div{
-
-    display: inline-block;
-    background-image: url("img/projects_bg.png");
-    margin: 30px;
-    color: white;
+.card:hover .gred {
+    top: 0;
 }
 
+.card .expand {
+    text-align: center;
+    margin-top: 10px;
+    transition: .5s;
+}
+.card .expand i{
+    font-size: 1.5rem;
+}
+.open {
+    transform: rotateX(180deg);
+}
 
-#first_project{
-    width: 320px;
-    height: 270px;
-    border: 1px solid red;
-    margin-left: 20px;
-    padding: 50px;
+.card .expandable {
+    text-align: center;
+    overflow: hidden;
+    transition: .5s;
+    display: none;
 }
-#second_project{
-    height: 270px;
-    border: 1px solid red;
-    width: 320px;
-    padding: 50px;
+.card .expandable h1 {
+    font-weight: 500;
+    letter-spacing: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    border-radius: 10px;
 }
-#third_project{
-    width: 320px;
-    height: 270px;
-    border: 1px solid red;
-    padding: 50px;
+.card .expandable .skills {
+    height: 200px;
+    overflow: auto;
+    padding: 10px 0px;
+    /* border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-radius: 10px; */
 
 }
-#fourth_project{
-    width: 320px;
-    height: 270px;
-    border: 1px solid red;
-    padding: 50px;
+.card .expandable .skills h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
 }
+.card .expandable .skills ul li {
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    padding: 2px 0px;
+}
+
+.card .footer {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    font-size: 1rem;
+}
+
+.card .footer a {
+    padding: 0 5px;
+    color: #fff;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    position: relative;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(102, 102, 102, 0.7);
+    border-radius: 10px;
+  }
